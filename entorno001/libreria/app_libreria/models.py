@@ -17,12 +17,13 @@ class Libro(models.Model):
     id       = models.IntegerField(primary_key=True)
     nombre   = models.CharField(max_length=50)
     autor    = models.CharField(max_length=50)
-    imagen   = models.ImageField()
+    imagen   = models.CharField(max_length=50)
     editorial= models.CharField(max_length=50)
+    stock    = models.IntegerField()
     def __str__(self):
         return self.nombre
     
-class Libro(models.Model):
+class Tienda(models.Model):
     id        = models.IntegerField(primary_key=True)
     ubicacion = models.CharField(max_length=50)
     def __str__(self):
